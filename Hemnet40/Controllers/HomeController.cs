@@ -11,6 +11,7 @@ namespace Hemnet40.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    //HALLÅ!
     public class HomeController : Controller
     {
         [HttpGet]
