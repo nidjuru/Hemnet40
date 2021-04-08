@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 //DÅ ÄR VI SYNCADE 
 //Hej hej
+//TJABBA
 namespace Hemnet40.Controllers
 {
     [ApiController]
