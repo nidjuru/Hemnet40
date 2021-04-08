@@ -1,8 +1,8 @@
 import "./App.css";
-import PostObject from "./components/PostObject";
+import GetObject from "./components/GetObject";
 
 function App() {
-  return <PostObject />;
+  return <GetObject />;
 }
 
 export default App;
