@@ -7659,11 +7659,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\eenid\\source\\repos\\Hemnet41\\Hemnet41\\Hemnet41.csproj",
+      "projectUniqueName": "C:\\Users\\eenid\\source\\repos\\Hemnet40\\Hemnet41\\Hemnet41.csproj",
       "projectName": "Hemnet41",
-      "projectPath": "C:\\Users\\eenid\\source\\repos\\Hemnet41\\Hemnet41\\Hemnet41.csproj",
+      "projectPath": "C:\\Users\\eenid\\source\\repos\\Hemnet40\\Hemnet41\\Hemnet41.csproj",
       "packagesPath": "C:\\Users\\eenid\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\eenid\\source\\repos\\Hemnet41\\Hemnet41\\obj\\",
+      "outputPath": "C:\\Users\\eenid\\source\\repos\\Hemnet40\\Hemnet41\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\eenid\\AppData\\Roaming\\NuGet\\NuGet.Config",
