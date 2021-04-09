@@ -186,3 +186,4 @@ C:\Users\eenid\source\repos\Hemnet40\Hemnet42\obj\Debug\net5.0\Razor\Views\Brook
 C:\Users\eenid\source\repos\Hemnet40\Hemnet42\obj\Debug\net5.0\Razor\Views\Brookers\Details.cshtml.g.cs
 C:\Users\eenid\source\repos\Hemnet40\Hemnet42\obj\Debug\net5.0\Razor\Views\Brookers\Edit.cshtml.g.cs
 C:\Users\eenid\source\repos\Hemnet40\Hemnet42\obj\Debug\net5.0\Razor\Views\Brookers\Index.cshtml.g.cs
+C:\Users\eenid\source\repos\Hemnet40\Hemnet42\obj\Debug\net5.0\Razor\Views\Objekts\IndexFinal.cshtml.g.cs

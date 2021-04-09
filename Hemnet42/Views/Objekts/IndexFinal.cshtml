@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+@model IEnumerable<Hemnet41.Models.Objekt>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/IndexFinal.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Responsive Card Grid Layout</h1>
+        <ul class="cards">
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">@Html.DisplayNameFor(model => model.Adress)</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn">Read More</button>
+                    </div>
+                </div>
+            </li>
+            @foreach (var item in Model)
+                {
+                <li>
+                    <h2>
+                        @Html.DisplayFor(modelItem => item.Adress)
+                    </h2>
+                </li>
+                }
+        </ul>
+    </div>
+</body>
+</html>

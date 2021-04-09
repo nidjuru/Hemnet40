@@ -50,7 +50,7 @@ namespace Hemnet42
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Objekts}/{action=Index}/{id?}");
+                    pattern: "{controller=Objekts}/{action=IndexFinal}/{id?}");
             });
         }
     }
