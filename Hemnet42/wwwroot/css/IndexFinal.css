@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    color: #272727;
+    color: black;
     font-family: 'Quicksand', serif;
     font-style: normal;
     font-weight: 400;
@@ -34,9 +34,10 @@ h1 {
 }
 
 img {
-    height: auto;
-    max-width: 100%;
+    height: 200px;
+    width: 100%;
     vertical-align: middle;
+    object-fit: cover;
 }
 
 .btn {
@@ -68,6 +69,10 @@ img {
 .cards_item {
     display: flex;
     padding: 1rem;
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
 }
 
 @media (min-width: 40rem) {
@@ -93,11 +98,11 @@ img {
 
 .card_content {
     padding: 1rem;
-    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+    background: white;
 }
 
 .card_title {
-    color: #ffffff;
+    color: black;
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -106,7 +111,7 @@ img {
 }
 
 .card_text {
-    color: #ffffff;
+    color: black;
     font-size: 0.875rem;
     line-height: 1.5;
     margin-bottom: 1.25rem;

@@ -1,7 +1,4 @@
-﻿@{
-    Layout = null;
-}
-@model IEnumerable<Hemnet41.Models.Objekt>
+﻿@model IEnumerable<Hemnet41.Models.Objekt>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,26 +11,25 @@
 </head>
 <body>
     <div class="main">
-        <h1>Responsive Card Grid Layout</h1>
+        <img src="~/images/Hemnet40.png" />
         <ul class="cards">
-            <li class="cards_item">
-                <div class="card">
-                    <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
-                    <div class="card_content">
-                        <h2 class="card_title">@Html.DisplayNameFor(model => model.Adress)</h2>
-                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-                        <button class="btn card_btn">Read More</button>
-                    </div>
-                </div>
-            </li>
+
             @foreach (var item in Model)
-                {
-                <li>
-                    <h2>
-                        @Html.DisplayFor(modelItem => item.Adress)
-                    </h2>
-                </li>
-                }
+            {   
+                <li class="cards_item">
+                    <a href="#">
+                        <div class="card">
+                            <div class="card_image"> <img src="@Html.DisplayFor(modelItem => item.Images)"></div>
+                            <div class="card_content">
+                                <h2 class="card_title">@Html.DisplayFor(modelItem => item.Adress)</h2>
+                                <p class="card_text">@Html.DisplayFor(modelItem => item.Price) SEK</p>
+                                <p class="card_text">Area: @Html.DisplayFor(modelItem => item.LivingArea) m²</p>
+                                <p class="card_text">Rooms: @Html.DisplayFor(modelItem => item.Rooms)</p>
+                            </div>
+                        </div>
+                    </a>
+               </li>
+            }
         </ul>
     </div>
 </body>

@@ -19,7 +19,7 @@ namespace Hemnet42.Controllers
         }
 
         // GET: Objekts
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> IndexFinal()
         {
             var hemnetContext = _context.Objekts.Include(o => o.Brooker);
             return View(await hemnetContext.ToListAsync());
@@ -155,10 +155,6 @@ namespace Hemnet42.Controllers
         {
             return _context.Objekts.Any(e => e.HouseId == id);
         }
-        public IActionResult IndexFinal()
-        {
-            var hemnetContext = _context.Objekts.Include(o => o.Brooker);
-            return View(await hemnetContext.ToListAsync());
-        }
+    
     }
 }
