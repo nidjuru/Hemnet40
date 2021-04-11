@@ -35,6 +35,13 @@ namespace Hemnet41
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Hemnet41", Version = "v1" });
             });
+
+            services.AddCors(opt => opt.AddPolicy("MyCorsPolicy", builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()));
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +53,7 @@ namespace Hemnet41
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Hemnet41 v1"));
             }
+            app.UseCors("MyCorsPolicy");
 
             app.UseRouting();
 
