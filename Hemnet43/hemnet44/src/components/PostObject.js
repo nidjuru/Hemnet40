@@ -57,7 +57,7 @@ const PostObject = () => {
       showingDate: showingDate,
       buildYear: buildYear,
       brookerId: 1,
-      brooker: {},
+      brooker: null,
     };
     fetch(
       `http://localhost:60627/api/Objekts
@@ -68,7 +68,7 @@ const PostObject = () => {
         body: JSON.stringify(body),
       }
     ).then((res) =>
-      res.JSON().then((data) => {
+      res.json().then((data) => {
         setImages("");
         setAdress("");
         setHousingType("");
@@ -83,86 +83,85 @@ const PostObject = () => {
         setBuildYear(0);
       })
     );
-    console.log(body);
   };
 
   return (
     <div>
-      <form>
-        <input
-          type="text"
-          placeholder="images"
-          value={images}
-          onChange={(event) => setImages(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="adress"
-          value={adress}
-          onChange={(event) => setAdress(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="housingType"
-          value={housingType}
-          onChange={(event) => setHousingType(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="formofLease"
-          value={formOfLease}
-          onChange={(event) => setFormOfLease(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="prices"
-          value={price}
-          onChange={(event) => setPrice(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="rooms"
-          value={rooms}
-          onChange={(event) => setRooms(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="livingArea"
-          value={livingArea}
-          onChange={(event) => setLivingArea(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="biArea"
-          value={biArea}
-          onChange={(event) => setBiArea(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="plotArea"
-          value={plotArea}
-          onChange={(event) => setPlotArea(event.target.value)}
-        />
-        <textarea
-          type="text"
-          placeholder="descriptions"
-          value={descriptions}
-          onChange={(event) => setDescriptions(event.target.value)}
-        />
-        <input
-          type="date"
-          placeholder="showingDate"
-          value={showingDate}
-          onChange={(event) => setShowingDate(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="buildYear"
-          value={buildYear}
-          onChange={(event) => setBuildYear(event.target.value)}
-        />
-        <button onClick={() => SubmitForm()}>Submit</button>
-      </form>
+      {/* <form> */}
+      <input
+        type="text"
+        placeholder="images"
+        value={images}
+        onChange={(event) => setImages(event.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="adress"
+        value={adress}
+        onChange={(event) => setAdress(event.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="housingType"
+        value={housingType}
+        onChange={(event) => setHousingType(event.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="formofLease"
+        value={formOfLease}
+        onChange={(event) => setFormOfLease(event.target.value)}
+      />
+      <input
+        type="number"
+        placeholder="prices"
+        value={price}
+        onChange={(event) => setPrice(event.target.value)}
+      />
+      <input
+        type="number"
+        placeholder="rooms"
+        value={rooms}
+        onChange={(event) => setRooms(event.target.value)}
+      />
+      <input
+        type="number"
+        placeholder="livingArea"
+        value={livingArea}
+        onChange={(event) => setLivingArea(event.target.value)}
+      />
+      <input
+        type="number"
+        placeholder="biArea"
+        value={biArea}
+        onChange={(event) => setBiArea(event.target.value)}
+      />
+      <input
+        type="number"
+        placeholder="plotArea"
+        value={plotArea}
+        onChange={(event) => setPlotArea(event.target.value)}
+      />
+      <textarea
+        type="text"
+        placeholder="descriptions"
+        value={descriptions}
+        onChange={(event) => setDescriptions(event.target.value)}
+      />
+      <input
+        type="date"
+        placeholder="showingDate"
+        value={showingDate}
+        onChange={(event) => setShowingDate(event.target.value)}
+      />
+      <input
+        type="number"
+        placeholder="buildYear"
+        value={buildYear}
+        onChange={(event) => setBuildYear(event.target.value)}
+      />
+      <button onClick={() => SubmitForm()}>Submit</button>
+      {/* </form> */}
     </div>
   );
 };

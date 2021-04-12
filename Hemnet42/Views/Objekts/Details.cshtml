@@ -12,88 +12,88 @@
 <div>
     <h4>Objekt</h4>
     <hr />
+    <div class="img-container">
+        <img class="col-sm-10"
+             src="@Html.DisplayFor(model => model.Images)" />
+    </div>
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Images)
+        <dt class="col-sm-2">
+            Address:
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Images)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Adress)
-        </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Adress)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HousingType)
+        <dt class="col-sm-2">
+            Utgångspris:
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Price) SEK
+        </dd>
+        <dt class="col-sm-2">
+            Bostadstyp:
+        </dt>
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.HousingType)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FormOfLease)
+        <dt class="col-sm-2">
+            Upplåtelseform:
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.FormOfLease)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
+        <dt class="col-sm-2">
+            Antal rum:
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Price)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rooms) Rum
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Rooms)
+        <dt class="col-sm-2">
+            Boarea:
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Rooms)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LivingArea) m²
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.LivingArea)
+        <dt class="col-sm-2">
+            Biarea:
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LivingArea)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BiArea) m²
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BiArea)
+        <dt class="col-sm-2">
+            Tomtarea:
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.BiArea)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PlotArea) m²
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PlotArea)
+        <dt class="col-sm-2">
+            Byggår:
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PlotArea)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Descriptions)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Descriptions)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ShowingDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ShowingDate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BuildYear)
-        </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.BuildYear)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Brooker)
+        <dt class="col-sm-2">
+            Beskrivning:
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Descriptions)
+        </dd>
+        <dt class="col-sm-2">
+            Visnings datum:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ShowingDate)
+        </dd>
+        <dt class="col-sm-2">
+            Mäklare:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Brooker.FirstName)
+            <br />
             @Html.DisplayFor(model => model.Brooker.Email)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.HouseId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+  
+    <a asp-action="IndexFinal">Back to List</a>
 </div>
