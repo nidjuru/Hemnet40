@@ -18,6 +18,7 @@ namespace Hemnet41.Models
         }
 
         public virtual DbSet<Brooker> Brookers { get; set; }
+        public virtual DbSet<Coordinate> Coordinates { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Objekt> Objekts { get; set; }
         public virtual DbSet<RegOfIntrest> RegOfIntrests { get; set; }
@@ -56,6 +57,17 @@ namespace Hemnet41.Models
                     .HasMaxLength(40)
                     .IsUnicode(false)
                     .HasColumnName("Last_name");
+            });
+
+            modelBuilder.Entity<Coordinate>(entity =>
+            {
+                entity.Property(e => e.Latitude)
+                    .HasColumnType("decimal(9, 7)")
+                    .HasColumnName("latitude");
+
+                entity.Property(e => e.Longitude)
+                    .HasColumnType("decimal(9, 7)")
+                    .HasColumnName("longitude");
             });
 
             modelBuilder.Entity<Customer>(entity =>
@@ -103,8 +115,7 @@ namespace Hemnet41.Models
                 entity.Property(e => e.BuildYear).HasColumnName("Build_year");
 
                 entity.Property(e => e.Descriptions)
-                    .IsRequired()
-                    .HasMaxLength(200)
+                    .HasMaxLength(455)
                     .IsUnicode(false);
 
                 entity.Property(e => e.FormOfLease)
@@ -120,8 +131,7 @@ namespace Hemnet41.Models
                     .HasColumnName("Housing_type");
 
                 entity.Property(e => e.Images)
-                    .IsRequired()
-                    .HasMaxLength(100)
+                    .HasMaxLength(255)
                     .IsUnicode(false);
 
                 entity.Property(e => e.LivingArea).HasColumnName("Living_area");
@@ -136,6 +146,11 @@ namespace Hemnet41.Models
                     .WithMany(p => p.Objekts)
                     .HasForeignKey(d => d.BrookerId)
                     .HasConstraintName("FK__Objekt__Brooker___35BCFE0A");
+
+                entity.HasOne(d => d.Coordinate)
+                    .WithMany(p => p.Objekts)
+                    .HasForeignKey(d => d.CoordinateId)
+                    .HasConstraintName("FK__Objekt__Coordina__4D94879B");
             });
 
             modelBuilder.Entity<RegOfIntrest>(entity =>
