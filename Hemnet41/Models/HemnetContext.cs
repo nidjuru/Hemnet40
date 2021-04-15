@@ -62,11 +62,11 @@ namespace Hemnet41.Models
             modelBuilder.Entity<Coordinate>(entity =>
             {
                 entity.Property(e => e.Latitude)
-                    .HasColumnType("decimal(9, 7)")
+                    .HasColumnType("numeric(9, 7)")
                     .HasColumnName("latitude");
 
                 entity.Property(e => e.Longitude)
-                    .HasColumnType("decimal(9, 7)")
+                    .HasColumnType("numeric(9, 7)")
                     .HasColumnName("longitude");
             });
 

@@ -21,7 +21,8 @@ namespace Hemnet42.Controllers
         // GET: Objekts
         public async Task<IActionResult> IndexFinal()
         {
-            var hemnetContext = _context.Objekts.Include(o => o.Brooker).Include(n => n.Coordinate);
+            var hemnetContext = _context.Objekts.Include(o => o.Brooker)
+                .Include(n => n.Coordinate);
             return View(await hemnetContext.ToListAsync());
         }
 

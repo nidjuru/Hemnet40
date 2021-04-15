@@ -13,8 +13,8 @@ namespace Hemnet41.Models
         }
 
         public int CoordinateId { get; set; }
-        public decimal Longitude { get; set; }
-        public decimal Latitude { get; set; }
+        public decimal? Longitude { get; set; }
+        public decimal? Latitude { get; set; }
 
         public virtual ICollection<Objekt> Objekts { get; set; }
     }

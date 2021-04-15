@@ -1,5 +1,4 @@
 ﻿@model Hemnet41.Models.Objekt
-@**@
 
 @{
     ViewData["Title"] = "Details";
@@ -7,10 +6,12 @@
 <head>
     <link rel="stylesheet" href="~/css/IndexFinal.css" />
     <script>
+        
         // Initialize and add the map
         function initMap() {
+            console.log(uluru)
             // The location of Uluru
-            const uluru = {lat:@($"{Decimal.ToDouble(Model.Coordinate.Latitude)}"), lng:@($"{Decimal.ToDouble(Model.Coordinate.Longitude)}")};
+            const uluru = {lat:@($"{Model.Coordinate.Latitude}"), lng:@($"{Model.Coordinate.Longitude}")};
             // The map, centered at Uluru
             const map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 15,
@@ -121,10 +122,17 @@
             @Html.DisplayFor(model => model.Brooker.FirstName)
             <br />
             @Html.DisplayFor(model => model.Brooker.Email)
+            @Html.DisplayFor(model => model.)
+
         </dd>
     </dl>
 </div>
 <div id="map"></div>
+<div>
+    <div>
+        <a asp-controller="Customers" asp-action="Create">Intresseanmälan</a>
+    </div>
+</div>
 
 <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-i6OyTv8dONZ3tJZf0UeGcsEWd9nP2NU&callback=initMap&libraries=&v=weekly"
